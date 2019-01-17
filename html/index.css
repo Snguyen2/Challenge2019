@@ -1,0 +1,99 @@
+header {
+    background-color:rgb(253,236,163);
+    color:rgb(255,98,97);
+    text-align:center;
+    padding-top:1px;
+}
+
+html, body {
+    width:100%;
+    height:100%;
+    margin:0%;
+    background-color:rgb(255,98,97);
+}
+html {
+    font-family: 'Roboto', sans-serif;
+}
+/*ZOEKGLAS*/
+#zoekglas {
+    font-size: 10em;
+    display: inline-block;
+    position: relative;
+    width: 0.4em;
+    height:0.4em;
+    border: 0.1em solid red;
+    border-radius:0.35em;
+}
+#zoekglas::before {
+    content:"";
+    display: inline-block;
+    background:red;
+    width:0.35em;
+    height:0.08em;
+    border-width:0;
+    position:absolute;
+    right:-0.25em;
+    bottom:-0.1em;
+    transform:rotate(45deg);
+} /* Einde ZOEKGLAS */
+
+.nav {
+    background-color:rgb(253,236,163);
+    border-bottom: 1px solid rgb(253,236,163);
+    text-align:right;
+    height:70px;
+    line-height:70px;
+}
+
+.menu {
+    margin: 0 30px 0 0;
+    background-color:rgb(253,236,163);
+
+}
+
+.menu a {
+    clear:left;
+    text-decoration:none;
+    color:black;
+    margin: 0 10px;
+    line-height: 70px;
+}
+
+label {
+    margin: 0 40px 0 0;
+    font-size:25px;
+    line-height: 70px;
+    display: none;
+    width: 25px;
+    float:left;
+}
+
+#menu {
+    float:left;
+}
+
+#toggle {
+    display: none;
+}
+
+@media only screen and (max-width:500px) {
+    /* Hamburger */
+    label {
+        display:block;
+        cursor:pointer;
+    }
+    .menu {
+        text-align: center;
+        width: 100%;
+        display: none;
+    }
+    .menu a {
+        display: block;
+        border-bottom: 1px solid rgb(253,236,163);
+        margin: 0;
+    }
+    #toggle:checked + .menu {
+        display: block;
+    }
+}
+
